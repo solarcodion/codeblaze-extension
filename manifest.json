@@ -1,0 +1,78 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "lovify",
+  "version": "1.1.0",
+  "description": "Enhance your Lovable.dev experience with improved prompts, plan management, and more",
+  "permissions": ["activeTab", "storage", "contextMenus"],
+  "host_permissions": ["https://lovable.dev/*", "https://*.lovable.app/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lovable.dev/*", "https://*.lovable.app/*"],
+      "js": [
+        "components/layout/modal-container.js",
+        "features/supabase/client.js",
+        "features/help/create.js",
+        "features/help/handlers.js",
+        "features/help/styles.js",
+        "features/help/voice.js",
+        "features/help/modal.js",
+        "features/help/button.js",
+        "features/github-import/button.js",
+        "features/github-import/modal.js",
+        "features/github-import/transfer-guide.js",
+        "features/improve/button.js",
+        "features/improve/first-prompt.js",
+        "features/improve/modal.js",
+        "features/improve/action-plan.js",
+        "features/auth/modal.js",
+        "features/prompts/button.js",
+        "features/prompts/modal.js",
+        "features/integrations/modal.js",
+        "features/console-debug/content.js",
+        "features/voice/button.js",
+        "features/voice/input.js",
+        "features/sparkles/button.js",
+        "features/rubber-duck/button.js",
+        "features/rubber-duck/voice.js",
+        "features/rubber-duck/modal.js",
+        "features/modals/docs-modal.js",
+        "features/modals/prompts-modal.js",
+        "features/modals/seo-modal.js",
+        "features/cook/modal.js",
+        "features/testing/modal.js",
+        "features/slash-commands/commands/auth.js",
+        "features/slash-commands/popup.js",
+        "features/plan-tab/index.js",
+        "features/plan-tab/init.js",
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/cook.webm",
+        "assets/duck.svg",
+        "assets/duck.gif",
+        "assets/loading.webm"
+      ],
+      "matches": ["https://lovable.dev/*", "https://*.lovable.app/*"]
+    }
+  ]
+}

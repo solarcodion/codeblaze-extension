@@ -1,0 +1,78 @@
+.lovify-popup {
+  width: 400px;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.lovify-popup .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lovify-popup h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lovify-popup .feature-section {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lovify-popup h2 {
+  color: #34495e;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.lovify-popup textarea,
+.lovify-popup input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.lovify-popup textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.lovify-popup button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lovify-popup button:hover {
+  background-color: #2980b9;
+}
+
+.lovify-popup #plan-list {
+  margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lovify-popup .plan-item {
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: 1px solid #eee;
+}
+
+.lovify-popup #toggle-voice.active {
+  background-color: #e74c3c;
+}
